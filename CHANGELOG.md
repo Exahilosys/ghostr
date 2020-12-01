@@ -8,6 +8,8 @@
 
 #### Fixes
 
+- Carry every sequence over placeholders.
+
 ## v0.0.1
 
 #### Changes

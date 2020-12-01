@@ -58,7 +58,16 @@ class GhoStr(collections.abc.Sequence):
                 if ghost:
                     yield self._dummy(value)
                     continue
-                yield from super().parse(value)
+                infos = super().parse(value)
+                infos = tuple(infos)
+                stop = len(infos) - 1
+                for (index, info) in enumerate(infos):
+                    yield info
+                    if index == stop:
+                        break
+                    yield self._dummy('')
+                if stop < 0:
+                    yield self._dummy('')
 
         @helpers.methcache
         def parse(self, value):
@@ -629,16 +638,16 @@ class ANSISGRGhoStr(CleanGhoStr):
         __slots__ = ()
 
         def _smear(self, infos):
-            last = None
-            for info in infos:
+            last = []
+            for (ghost, info) in helpers.inspect(infos):
                 yield info
+                if ghost:
+                    last.append(info[0])
+                    continue
                 name = info[1]
                 if not name is None:
-                    finalize = _ansi_sgr_null
-                    if not last is None:
-                        finalize += last
-                    yield self._dummy(finalize)
-                last = info[0]
+                    final = _ansi_sgr_null + ''.join(last)
+                    yield self._dummy(final)
 
         @helpers.methcache
         def parse(self, value):
