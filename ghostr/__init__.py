@@ -633,8 +633,11 @@ class ANSISGRGhoStr(CleanGhoStr):
             for info in infos:
                 yield info
                 name = info[1]
-                if not (name is None or last is None):
-                    yield self._dummy(_ansi_sgr_null + last)
+                if not name is None:
+                    finalize = _ansi_sgr_null
+                    if not last is None:
+                        finalize += last
+                    yield self._dummy(finalize)
                 last = info[0]
 
         @helpers.methcache
