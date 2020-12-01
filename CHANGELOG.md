@@ -4,6 +4,8 @@
 
 #### Changes
 
+- ``AnsiSGRGhoStr`` now has all abbreviations as capitals.
+
 #### Removals
 
 #### Fixes

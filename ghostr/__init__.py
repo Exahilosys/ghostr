@@ -611,7 +611,7 @@ def _ansi_sgr_mutate(last, next, family = _check_sgr_group_family):
 del _check_sgr_group_family
 
 
-class AnsiSGRGhoStr(CleanGhoStr):
+class ANSISGRGhoStr(CleanGhoStr):
 
     """
     Used to handle `ANSI SGR
