@@ -593,7 +593,7 @@ del _ansi_sgr_groups
 
 def _ansi_sgr_mutate(last, next, family = _check_sgr_group_family):
 
-    if not len(last) > 0:
+    if not last:
         last.append(next)
         return
 
