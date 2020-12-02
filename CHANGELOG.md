@@ -8,6 +8,10 @@
 
 #### Fixes
 
+## v0.0.3
+
+#### Fixes
+
 - ``GhoStr.__format__`` no longer raises an exception
 
 ## v0.0.2

@@ -6,7 +6,7 @@ with open('README.rst') as file:
 
 name = 'ghostr'
 
-version = '0.0.2'
+version = '0.0.3'
 
 author = 'Exahilosys'
 
