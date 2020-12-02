@@ -9,7 +9,7 @@ import itertools
 from . import helpers
 
 
-__all__ = ('GhoStr', 'CleanGhoStr', 'AnsiSGRGhoStr')
+__all__ = ('GhoStr', 'CleanGhoStr', 'ANSISGRGhoStr')
 
 
 class GhoStr(collections.abc.Sequence):

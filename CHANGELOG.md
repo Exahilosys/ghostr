@@ -8,11 +8,13 @@
 
 #### Fixes
 
+- Added ``ANSISGRGhoStr`` to ``__all__``.
+
 ## v0.0.3
 
 #### Fixes
 
-- ``GhoStr.__format__`` no longer raises an exception
+- ``GhoStr.__format__`` no longer raises an exception.
 
 ## v0.0.2
 
