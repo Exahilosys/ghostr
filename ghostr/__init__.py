@@ -485,7 +485,7 @@ class GhoStr(collections.abc.Sequence):
 
     def __format__(self, value):
 
-        raise self.format(value)
+        return format(self._value, value)
 
     def __iter__(self):
 
