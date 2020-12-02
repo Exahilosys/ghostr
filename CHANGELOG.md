@@ -8,6 +8,10 @@
 
 #### Fixes
 
+## v0.0.4
+
+#### Fixes
+
 - Added ``ANSISGRGhoStr`` to ``__all__``.
 
 ## v0.0.3
